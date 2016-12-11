@@ -110,6 +110,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\D_ERP\D_Lib\D_Lib.csproj">
+      <Project>{B977E14D-FB92-4C45-8028-6AEA8B3504F5}</Project>
+      <Name>D_Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\D_ERP\UI.Res\UI.Res.csproj">
+      <Project>{10F7651A-C2B7-4032-9769-875B719ADC79}</Project>
+      <Name>UI.Res</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

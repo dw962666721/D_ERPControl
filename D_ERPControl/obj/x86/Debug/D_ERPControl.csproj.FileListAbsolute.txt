@@ -1,1 +1,16 @@
 E:\DW\D_ERPControl\D_ERPControl\bin\Debug\D_ERPControl.exe.config
+E:\DW\D_ERPControl\D_ERPControl\bin\Debug\D_ERPControl.exe
+E:\DW\D_ERPControl\D_ERPControl\bin\Debug\D_ERPControl.pdb
+E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.csprojResolveAssemblyReference.cache
+E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.CompanyType.CompanyTypeFrm.resources
+E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.Form1.resources
+E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.Properties.Resources.resources
+E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.Property.AddPropertyFrm.resources
+E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.Property.PropertyFrm.resources
+E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.csproj.GenerateResource.Cache
+E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.exe
+E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.pdb
+E:\DW\D_ERPControl\D_ERPControl\bin\Debug\D_Lib.dll
+E:\DW\D_ERPControl\D_ERPControl\bin\Debug\UI.Res.dll
+E:\DW\D_ERPControl\D_ERPControl\bin\Debug\D_Lib.pdb
+E:\DW\D_ERPControl\D_ERPControl\bin\Debug\UI.Res.pdb

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using D_ERPControl.Property;
 
 namespace D_ERPControl
 {
@@ -15,10 +16,11 @@ namespace D_ERPControl
         {
             InitializeComponent();
         }
-
+        PropertyFrm propertyFrm;
         private void Form1_Load(object sender, EventArgs e)
         {
             listBox1.Items.Add("公司类型");
+            propertyFrm = new PropertyFrm();
         }
 
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -28,6 +30,7 @@ namespace D_ERPControl
                 switch(listBox1.SelectedIndex)
                 {
                     case 0:
+                        propertyFrm.Show(dockPanel1);
                         break;
                     case 1:
                         break;

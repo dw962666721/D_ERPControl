@@ -59,6 +59,7 @@
             this.ClientSize = new System.Drawing.Size(586, 336);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dockPanel1);
+            this.IsMdiContainer = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
