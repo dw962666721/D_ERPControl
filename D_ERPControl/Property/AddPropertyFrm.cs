@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
 using UI.Res;
 using D_Lib;
+using D_Lib.ErpInfo;
 
 namespace D_ERPControl.Property
 {
@@ -19,10 +20,12 @@ namespace D_ERPControl.Property
             InitializeComponent();
         }
         Guid id=Guid.Empty;
-        public AddPropertyFrm(Guid propertyid)
+        public AddPropertyFrm(PropertyInfo info)
         {
             InitializeComponent();
-            id = propertyid;
+            id = info.aaId;
+            textBox1.Text = info.aaPropertyname;
+            comboBox1.SelectedIndex = info.aaPropertytype == "1" ? 1 : 0;
             button1.Text = "更新";
         }
 
@@ -36,8 +39,8 @@ namespace D_ERPControl.Property
             if (id == Guid.Empty)
             {
                 Dictionary<string, object> param = new Dictionary<string, object>();
-                param.Add("propertyname ", textBox1.Text);
-                param.Add("propertytype ", comboBox1.SelectedIndex);
+                param.Add("propertyname", textBox1.Text);
+                param.Add("propertytype", comboBox1.SelectedIndex);
                 Dictionary<string, object> dict = HttpTool.Post(UrlList.ServerUrl + UrlList.AddProductPropertyUrl, param);
                 if (dict["res"].ToString() == "1")
                 {
