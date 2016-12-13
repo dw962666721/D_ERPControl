@@ -31,7 +31,7 @@ namespace D_ERPControl.Property
 
         private void AddPropertyFrm_Load(object sender, EventArgs e)
         {
-            comboBox1.SelectedIndex = 0;
+            //comboBox1.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,10 +54,10 @@ namespace D_ERPControl.Property
             else
             {
                 Dictionary<string, object> param = new Dictionary<string, object>();
-                param.Add("id ", id);
-                param.Add("propertyname ", textBox1.Text);
-                param.Add("propertytype ", comboBox1.SelectedIndex);
-                Dictionary<string, object> dict = HttpTool.Post(UrlList.ServerUrl + UrlList.AddProductPropertyUrl, param);
+                param.Add("id", id);
+                param.Add("propertyname", textBox1.Text);
+                param.Add("propertytype", comboBox1.SelectedIndex);
+                Dictionary<string, object> dict = HttpTool.Post(UrlList.ServerUrl + UrlList.UpdateProductPropertyUrl, param);
                 if (dict["res"].ToString() == "1")
                 {
                     if (MessageBox.Show("更新成功!")== System.Windows.Forms.DialogResult.OK)

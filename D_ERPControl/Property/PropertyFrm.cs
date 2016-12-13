@@ -29,6 +29,7 @@ namespace D_ERPControl.Property
             this.dataGridView1.Columns.Add("propertyname","属性名");
             this.dataGridView1.Columns.Add("propertytype", "属性类型");
             this.dataGridView1.Columns.Add("createtime", "录入时间");
+            this.dataGridView1.Columns.Add("enable", "有效");
             this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Dictionary<string, object> param = new Dictionary<string, object>();
             search(param);
@@ -38,7 +39,8 @@ namespace D_ERPControl.Property
         {
             Dictionary<string, object> param = new Dictionary<string, object>();
             param.Add("propertyname", textBox1.Text);
-            param.Add("propertytype", comboBox2.SelectedIndex);
+            string type = comboBox2.SelectedIndex==0?"":(comboBox2.SelectedIndex-1).ToString();
+            param.Add("propertytype", type);
             int enable = int.MinValue;
             if (comboBox1.SelectedIndex == 1)
             {
@@ -69,6 +71,7 @@ namespace D_ERPControl.Property
                         dataGridView1.Rows[index].Cells[0].Value = info.aaPropertyname;
                         dataGridView1.Rows[index].Cells[1].Value = info.aaPropertytype == "0" ? "文字" : "列表";
                         dataGridView1.Rows[index].Cells[2].Value = info.aaCreatetime;
+                        dataGridView1.Rows[index].Cells[3].Value = info.aaEnable==1?"有效":"无效";
                     }
             }
             else
@@ -93,6 +96,33 @@ namespace D_ERPControl.Property
             {
                 AddPropertyFrm addFrom = new AddPropertyFrm(dataGridView1.SelectedRows[0].Tag as PropertyInfo);
                 addFrom.ShowDialog();
+            }
+        }
+
+        private void 修改ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                AddPropertyFrm addFrom = new AddPropertyFrm(dataGridView1.SelectedRows[0].Tag as PropertyInfo);
+                addFrom.ShowDialog();
+            }
+        }
+
+        private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("id", (dataGridView1.SelectedRows[0].Tag as PropertyInfo).aaId);
+                Dictionary<string, object> dict = HttpTool.Post(UrlList.ServerUrl + UrlList.DelProductPropertyUrl, param);
+                if (dict["res"].ToString() == "1")
+                {
+                    dataGridView1.SelectedRows[0].Cells[3].Value = "无效";
+                }
+                else
+                {
+                    MessageBox.Show(dict["msg"].ToString());
+                }
             }
         }
     }
