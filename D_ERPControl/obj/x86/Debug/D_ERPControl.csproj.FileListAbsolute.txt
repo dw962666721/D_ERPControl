@@ -14,3 +14,4 @@ E:\DW\D_ERPControl\D_ERPControl\bin\Debug\D_Lib.dll
 E:\DW\D_ERPControl\D_ERPControl\bin\Debug\UI.Res.dll
 E:\DW\D_ERPControl\D_ERPControl\bin\Debug\D_Lib.pdb
 E:\DW\D_ERPControl\D_ERPControl\bin\Debug\UI.Res.pdb
+E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.CompanyType.AddCompanyType.resources

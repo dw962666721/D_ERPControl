@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using D_ERPControl.Property;
+using D_ERPControl.CompanyType;
 
 namespace D_ERPControl
 {
@@ -17,10 +18,13 @@ namespace D_ERPControl
             InitializeComponent();
         }
         PropertyFrm propertyFrm;
+        CompanyTypeFrm companyTypeFrm;
         private void Form1_Load(object sender, EventArgs e)
         {
-            listBox1.Items.Add("公司类型");
+            listBox1.Items.Add("属性集合");
+            listBox1.Items.Add("行业类别");
             propertyFrm = new PropertyFrm();
+            companyTypeFrm = new CompanyTypeFrm();
         }
 
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -33,6 +37,7 @@ namespace D_ERPControl
                         propertyFrm.Show(dockPanel1);
                         break;
                     case 1:
+                        companyTypeFrm.Show(dockPanel1);
                         break;
                     default:
                         break;
