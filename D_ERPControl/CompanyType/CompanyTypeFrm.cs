@@ -115,7 +115,11 @@ namespace D_ERPControl.CompanyType
 
         private void 查看行业属性ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                TypePropertysFrm detailsFrm = new TypePropertysFrm(dataGridView1.SelectedRows[0].Tag as CompanyTypeInfo);
+                detailsFrm.Show();
+            }
         }
 
 
