@@ -32,6 +32,7 @@ namespace D_ERPControl.CompanyType
         {
             dataGridView1.Columns.Add("sno", "序号");
             dataGridView1.Columns.Add("propertyname", "属性名称");
+            dataGridView1.Columns.Add("placename", "替代名称");
             Dictionary<string, object> param = new Dictionary<string, object>();
             search(param);
         }
@@ -52,6 +53,7 @@ namespace D_ERPControl.CompanyType
                         int index = dataGridView1.Rows.Add(dr);
                         dataGridView1.Rows[index].Cells[0].Value = info.aaSno;
                         dataGridView1.Rows[index].Cells[1].Value = info.aaPropertyname;
+                        dataGridView1.Rows[index].Cells[2].Value = info.aaPlacename;
                     }
             }
             else
@@ -73,17 +75,20 @@ namespace D_ERPControl.CompanyType
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                CompanyTypeDetailsInfo info = dataGridView1.SelectedRows[0].Tag as CompanyTypeDetailsInfo;
-                Dictionary<string, object> param = new Dictionary<string, object>();
-                param.Add("id", info.aaId);
-                Dictionary<string, object> dict = HttpTool.Post(UrlList.ServerUrl + UrlList.DelCompanyTypeDetailsInfoUrl, param);
-                if (dict["res"].ToString() == "1")
+                if (MessageBox.Show("确定删除？", "提示", MessageBoxButtons.YesNoCancel) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
-                }
-                else
-                {
-                    MessageBox.Show(dict["msg"].ToString());
+                    CompanyTypeDetailsInfo info = dataGridView1.SelectedRows[0].Tag as CompanyTypeDetailsInfo;
+                    Dictionary<string, object> param = new Dictionary<string, object>();
+                    param.Add("id", info.aaId);
+                    Dictionary<string, object> dict = HttpTool.Post(UrlList.ServerUrl + UrlList.DelCompanyTypeDetailsInfoUrl, param);
+                    if (dict["res"].ToString() == "1")
+                    {
+                        dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
+                    }
+                    else
+                    {
+                        MessageBox.Show(dict["msg"].ToString());
+                    }
                 }
             }
         }
@@ -111,6 +116,20 @@ namespace D_ERPControl.CompanyType
             {
                 CompanyTypeDetailsInfo info = dataGridView1.SelectedRows[0].Tag as CompanyTypeDetailsInfo;
                 UpdateSnoFrm updateFrm = new UpdateSnoFrm(info);
+                if (updateFrm.ShowDialog() == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    Dictionary<string, object> param = new Dictionary<string, object>();
+                    search(param);
+                }
+            }
+        }
+
+        private void 修改替代名称ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                CompanyTypeDetailsInfo info = dataGridView1.SelectedRows[0].Tag as CompanyTypeDetailsInfo;
+                UpdatePlaceNameFrm updateFrm = new UpdatePlaceNameFrm(info);
                 if (updateFrm.ShowDialog() == System.Windows.Forms.DialogResult.Cancel)
                 {
                     Dictionary<string, object> param = new Dictionary<string, object>();

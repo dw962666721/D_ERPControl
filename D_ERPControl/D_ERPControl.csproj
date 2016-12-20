@@ -76,6 +76,12 @@
     <Compile Include="CompanyType\TypePropertysFrm.Designer.cs">
       <DependentUpon>TypePropertysFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CompanyType\UpdatePlaceNameFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyType\UpdatePlaceNameFrm.Designer.cs">
+      <DependentUpon>UpdatePlaceNameFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompanyType\UpdateSnoFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CompanyType\TypePropertysFrm.resx">
       <DependentUpon>TypePropertysFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyType\UpdatePlaceNameFrm.resx">
+      <DependentUpon>UpdatePlaceNameFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompanyType\UpdateSnoFrm.resx">
       <DependentUpon>UpdateSnoFrm.cs</DependentUpon>

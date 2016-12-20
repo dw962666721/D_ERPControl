@@ -31,9 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.修改序号ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
-            this.修改序号ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改替代名称ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -49,16 +50,24 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(244, 324);
+            this.dataGridView1.Size = new System.Drawing.Size(433, 324);
             this.dataGridView1.TabIndex = 5;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.修改替代名称ToolStripMenuItem,
             this.修改序号ToolStripMenuItem,
             this.删除ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(149, 70);
+            // 
+            // 修改序号ToolStripMenuItem
+            // 
+            this.修改序号ToolStripMenuItem.Name = "修改序号ToolStripMenuItem";
+            this.修改序号ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改序号ToolStripMenuItem.Text = "修改序号";
+            this.修改序号ToolStripMenuItem.Click += new System.EventHandler(this.修改序号ToolStripMenuItem_Click);
             // 
             // 删除ToolStripMenuItem
             // 
@@ -72,24 +81,24 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(244, 23);
+            this.button1.Size = new System.Drawing.Size(433, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = "添加";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // 修改序号ToolStripMenuItem
+            // 修改替代名称ToolStripMenuItem
             // 
-            this.修改序号ToolStripMenuItem.Name = "修改序号ToolStripMenuItem";
-            this.修改序号ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.修改序号ToolStripMenuItem.Text = "修改序号";
-            this.修改序号ToolStripMenuItem.Click += new System.EventHandler(this.修改序号ToolStripMenuItem_Click);
+            this.修改替代名称ToolStripMenuItem.Name = "修改替代名称ToolStripMenuItem";
+            this.修改替代名称ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改替代名称ToolStripMenuItem.Text = "修改替代名称";
+            this.修改替代名称ToolStripMenuItem.Click += new System.EventHandler(this.修改替代名称ToolStripMenuItem_Click);
             // 
             // TypePropertysFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(244, 347);
+            this.ClientSize = new System.Drawing.Size(433, 347);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Name = "TypePropertysFrm";
@@ -109,5 +118,6 @@
         private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem 修改序号ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 修改替代名称ToolStripMenuItem;
     }
 }

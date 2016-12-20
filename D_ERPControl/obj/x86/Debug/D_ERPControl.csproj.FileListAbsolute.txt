@@ -18,3 +18,4 @@ E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.CompanyType.AddCompan
 E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.CompanyType.TypePropertysFrm.resources
 E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.CompanyType.AddTypePropertysFrm.resources
 E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.CompanyType.UpdateSnoFrm.resources
+E:\DW\D_ERPControl\D_ERPControl\obj\x86\Debug\D_ERPControl.CompanyType.UpdatePlaceNameFrm.resources

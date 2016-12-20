@@ -29,7 +29,7 @@ namespace D_ERPControl.CompanyType
             dataGridView1.Columns.Add("enable", "是否有效");
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Dictionary<string, object> param = new Dictionary<string, object>();
-            search(param);
+            search(param);  
         }
         private void search(Dictionary<string, object> param)
         {
