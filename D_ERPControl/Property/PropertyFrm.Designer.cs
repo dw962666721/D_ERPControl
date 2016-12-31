@@ -39,9 +39,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -93,6 +95,8 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -111,7 +115,7 @@
             "全部",
             "TextBox",
             "ComboBox"});
-            this.comboBox2.Location = new System.Drawing.Point(68, 41);
+            this.comboBox2.Location = new System.Drawing.Point(96, 47);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(153, 20);
             this.comboBox2.TabIndex = 7;
@@ -119,7 +123,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 45);
+            this.label3.Location = new System.Drawing.Point(36, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 6;
@@ -161,12 +165,12 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 20);
             this.comboBox1.TabIndex = 3;
             // 
-            // textBox1
+            // textBox2
             // 
-            this.textBox1.Location = new System.Drawing.Point(68, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 21);
-            this.textBox1.TabIndex = 2;
+            this.textBox2.Location = new System.Drawing.Point(360, 14);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(153, 21);
+            this.textBox2.TabIndex = 2;
             // 
             // label2
             // 
@@ -181,11 +185,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Location = new System.Drawing.Point(278, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.Size = new System.Drawing.Size(89, 12);
             this.label1.TabIndex = 0;
-            this.label1.Text = "属性名称：";
+            this.label1.Text = "属中文性名称：";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 12);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "属性英文名称：";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(96, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(153, 21);
+            this.textBox1.TabIndex = 2;
             // 
             // PropertyFrm
             // 
@@ -213,7 +233,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
@@ -223,5 +243,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 修改ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
     }
 }

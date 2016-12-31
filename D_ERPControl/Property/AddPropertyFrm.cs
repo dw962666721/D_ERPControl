@@ -24,7 +24,9 @@ namespace D_ERPControl.Property
         {
             InitializeComponent();
             id = info.aaId;
-            textBox1.Text = info.aaPropertyname;
+            textBox1.Text = info.aaChinesename;
+            textBox2.Text = info.aaEnglishname;
+            textBox2.ReadOnly = true;
             comboBox1.SelectedIndex = info.aaPropertytype == "1" ? 1 : 0;
             button1.Text = "更新";
         }
@@ -39,7 +41,8 @@ namespace D_ERPControl.Property
             if (id == Guid.Empty)
             {
                 Dictionary<string, object> param = new Dictionary<string, object>();
-                param.Add("propertyname", textBox1.Text);
+                param.Add("englishname", textBox2.Text);
+                param.Add("chinesename", textBox1.Text);
                 param.Add("propertytype", comboBox1.SelectedIndex);
                 Dictionary<string, object> dict = HttpTool.Post(UrlList.ServerUrl + UrlList.AddProductPropertyUrl, param);
                 if (dict["res"].ToString() == "1")
@@ -55,7 +58,8 @@ namespace D_ERPControl.Property
             {
                 Dictionary<string, object> param = new Dictionary<string, object>();
                 param.Add("id", id);
-                param.Add("propertyname", textBox1.Text);
+                param.Add("englishname", textBox2.Text);
+                param.Add("chinesename", textBox1.Text);
                 param.Add("propertytype", comboBox1.SelectedIndex);
                 Dictionary<string, object> dict = HttpTool.Post(UrlList.ServerUrl + UrlList.UpdateProductPropertyUrl, param);
                 if (dict["res"].ToString() == "1")

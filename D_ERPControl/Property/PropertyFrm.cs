@@ -26,7 +26,8 @@ namespace D_ERPControl.Property
         {
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
-            this.dataGridView1.Columns.Add("propertyname","属性名");
+            this.dataGridView1.Columns.Add("englishname", "属性英文名名");
+            this.dataGridView1.Columns.Add("chinesename", "属性中文名名");
             this.dataGridView1.Columns.Add("propertytype", "属性类型");
             this.dataGridView1.Columns.Add("createtime", "录入时间");
             this.dataGridView1.Columns.Add("enable", "有效");
@@ -38,7 +39,8 @@ namespace D_ERPControl.Property
         private void button1_Click(object sender, EventArgs e)
         {
             Dictionary<string, object> param = new Dictionary<string, object>();
-            param.Add("propertyname", textBox1.Text);
+            param.Add("englishname", textBox2.Text);
+            param.Add("chinesename", textBox1.Text);
             string type = comboBox2.SelectedIndex==0?"":(comboBox2.SelectedIndex-1).ToString();
             param.Add("propertytype", type);
             int enable = int.MinValue;
@@ -68,10 +70,11 @@ namespace D_ERPControl.Property
                         dr.Tag = info;
                         dr.CreateCells(dataGridView1);
                         int index = dataGridView1.Rows.Add(dr);
-                        dataGridView1.Rows[index].Cells[0].Value = info.aaPropertyname;
-                        dataGridView1.Rows[index].Cells[1].Value = info.aaPropertytype == "0" ? "文字" : "列表";
-                        dataGridView1.Rows[index].Cells[2].Value = info.aaCreatetime;
-                        dataGridView1.Rows[index].Cells[3].Value = info.aaEnable==1?"有效":"无效";
+                        dataGridView1.Rows[index].Cells[0].Value = info.aaEnglishname;
+                        dataGridView1.Rows[index].Cells[1].Value = info.aaChinesename;
+                        dataGridView1.Rows[index].Cells[2].Value = info.aaPropertytype == "0" ? "文字" : "列表";
+                        dataGridView1.Rows[index].Cells[3].Value = info.aaCreatetime;
+                        dataGridView1.Rows[index].Cells[4].Value = info.aaEnable==1?"有效":"无效";
                     }
             }
             else

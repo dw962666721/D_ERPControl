@@ -34,6 +34,7 @@ namespace D_ERPControl.CompanyType
             dataGridView1.Columns.Add("propertyname", "属性名称");
             dataGridView1.Columns.Add("placename", "替代名称");
             Dictionary<string, object> param = new Dictionary<string, object>();
+            param.Add("typeid",TypeInfo.aaId);
             search(param);
         }
         private void search(Dictionary<string, object> param)
@@ -106,6 +107,7 @@ namespace D_ERPControl.CompanyType
             if (addFrm.ShowDialog() == System.Windows.Forms.DialogResult.Cancel)
             {
                 Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("typeid", TypeInfo.aaId);
                 search(param);
             }
         }
@@ -119,6 +121,7 @@ namespace D_ERPControl.CompanyType
                 if (updateFrm.ShowDialog() == System.Windows.Forms.DialogResult.Cancel)
                 {
                     Dictionary<string, object> param = new Dictionary<string, object>();
+                    param.Add("typeid", TypeInfo.aaId);
                     search(param);
                 }
             }
@@ -133,6 +136,7 @@ namespace D_ERPControl.CompanyType
                 if (updateFrm.ShowDialog() == System.Windows.Forms.DialogResult.Cancel)
                 {
                     Dictionary<string, object> param = new Dictionary<string, object>();
+                    param.Add("typeid", TypeInfo.aaId);
                     search(param);
                 }
             }

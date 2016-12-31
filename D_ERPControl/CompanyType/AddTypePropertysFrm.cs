@@ -61,7 +61,7 @@ namespace D_ERPControl.CompanyType
                         dr.Tag = info;
                         dr.CreateCells(dataGridView1);
                         int index = dataGridView1.Rows.Add(dr);
-                        dataGridView1.Rows[index].Cells[0].Value = info.aaPropertyname;
+                        dataGridView1.Rows[index].Cells[0].Value = info.aaChinesename;
                         dataGridView1.Rows[index].Cells[1].Value = info.aaPropertytype == "0" ? "文字" : "列表";
                         dataGridView1.Rows[index].Cells[2].Value = info.aaCreatetime;
                     }
